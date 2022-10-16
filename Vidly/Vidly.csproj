@@ -224,8 +224,41 @@
     <Compile Include="Migrations\202210162040427_ApplyNotationsToCustomerName.designer.cs">
       <DependentUpon>202210162040427_ApplyNotationsToCustomerName.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202210162128074_AddNameToMemberShip.cs" />
+    <Compile Include="Migrations\202210162128074_AddNameToMemberShip.designer.cs">
+      <DependentUpon>202210162128074_AddNameToMemberShip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210162138030_AddBithDateToCustomer.cs" />
+    <Compile Include="Migrations\202210162138030_AddBithDateToCustomer.designer.cs">
+      <DependentUpon>202210162138030_AddBithDateToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210162147267_AddGenres.cs" />
+    <Compile Include="Migrations\202210162147267_AddGenres.designer.cs">
+      <DependentUpon>202210162147267_AddGenres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210162149317_AddGenres1.cs" />
+    <Compile Include="Migrations\202210162149317_AddGenres1.designer.cs">
+      <DependentUpon>202210162149317_AddGenres1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210162153559_AddGenre.cs" />
+    <Compile Include="Migrations\202210162153559_AddGenre.designer.cs">
+      <DependentUpon>202210162153559_AddGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210162156514_AddGenre1.cs" />
+    <Compile Include="Migrations\202210162156514_AddGenre1.designer.cs">
+      <DependentUpon>202210162156514_AddGenre1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210162158107_AddGenre2.cs" />
+    <Compile Include="Migrations\202210162158107_AddGenre2.designer.cs">
+      <DependentUpon>202210162158107_AddGenre2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210162159164_PopulateGenre.cs" />
+    <Compile Include="Migrations\202210162159164_PopulateGenre.designer.cs">
+      <DependentUpon>202210162159164_PopulateGenre.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -297,6 +330,7 @@
     <Content Include="Views\Customers\Index.cshtml" />
     <Content Include="Views\Customers\Details.cshtml" />
     <Content Include="Views\Movies\Index.cshtml" />
+    <Content Include="Views\Movies\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -350,6 +384,30 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202210162040427_ApplyNotationsToCustomerName.resx">
       <DependentUpon>202210162040427_ApplyNotationsToCustomerName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210162128074_AddNameToMemberShip.resx">
+      <DependentUpon>202210162128074_AddNameToMemberShip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210162138030_AddBithDateToCustomer.resx">
+      <DependentUpon>202210162138030_AddBithDateToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210162147267_AddGenres.resx">
+      <DependentUpon>202210162147267_AddGenres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210162149317_AddGenres1.resx">
+      <DependentUpon>202210162149317_AddGenres1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210162153559_AddGenre.resx">
+      <DependentUpon>202210162153559_AddGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210162156514_AddGenre1.resx">
+      <DependentUpon>202210162156514_AddGenre1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210162158107_AddGenre2.resx">
+      <DependentUpon>202210162158107_AddGenre2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210162159164_PopulateGenre.resx">
+      <DependentUpon>202210162159164_PopulateGenre.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
