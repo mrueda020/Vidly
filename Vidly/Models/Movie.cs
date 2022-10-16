@@ -7,20 +7,8 @@ namespace Vidly.Models
 {
     public class Movie
     {
-        public int id { set; get; }
-        public string name { set; get; }
-
-        private int year;
-
-        public void setYear(int year)
-        {
-            this.year = year;
-        }
-
-        public int getYear()
-        {
-            return this.year;
-        }
+        public int Id { set; get; }
+        public string Name { set; get; }
 
     }
 }
