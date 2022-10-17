@@ -4,8 +4,12 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Customers</h2>
-
+<div class="d-flex flex-row">
+    <h2>Customers</h2>
+    
+    @Html.ActionLink("Create Customer", "New", "Customers", new { area = "" }, new { @class = "btn btn-primary" })
+</div>
+<br />
 @if (!Model.Any())
 {
     <p>No Customers</p>
@@ -24,7 +28,7 @@ else
             @foreach (var customer in Model)
             {
                 <tr>
-                    <td>@Html.ActionLink(customer.Name, "Details", "Customers", new { id = customer.Id }, null)</td>
+                    <td>@Html.ActionLink(customer.Name, "Edit", "Customers", new { id = customer.Id }, null)</td>
                     <td>@customer.MembershipType.DiscountRate %</td>
                     <td>@customer.MembershipType.Name</td>
                 </tr>
