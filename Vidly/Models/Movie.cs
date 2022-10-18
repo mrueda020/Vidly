@@ -8,6 +8,7 @@ namespace Vidly.Models
 {
     public class Movie
     {
+        [Key]
         public int Id { set; get; }
 
         [Required]
@@ -24,6 +25,8 @@ namespace Vidly.Models
         public DateTime ReleaseDate { get; set; }
         [Range(0,22)]
         public byte NumberInStock { get; set; }
+
+         public List<Rents> Rents { get; set; }
 
     }
 }

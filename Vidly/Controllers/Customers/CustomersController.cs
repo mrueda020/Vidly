@@ -34,7 +34,10 @@ namespace Vidly.Controllers.Customers
 
         public ActionResult Details(int id)
         {
-            var customer = _context.Customers.ToList().SingleOrDefault(c => c.Id == id);
+            var customer = _context.Customers.Include(c => c.Rents).ToList().SingleOrDefault(c => c.Id == id);
+            var movies = _context.Movies.Include(c => c.Rents).ToList().SingleOrDefault(c => c.Id == id);
+            var genres = _context.Movies.Include(c => c.Genre).ToList().SingleOrDefault(c => c.Id == id);
+
             if (customer == null)
             {
                 return HttpNotFound();

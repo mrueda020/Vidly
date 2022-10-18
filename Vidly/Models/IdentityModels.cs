@@ -28,6 +28,8 @@ namespace Vidly.Models
 
         public DbSet<Genre> Genres { get; set; }
 
+        public DbSet<Rents> Rents { get; set; }
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
