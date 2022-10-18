@@ -22,7 +22,7 @@ namespace Vidly.Models
         public DateTime DateAdded { get; set; }
 
         public DateTime ReleaseDate { get; set; }
-
+        [Range(0,22)]
         public byte NumberInStock { get; set; }
 
     }

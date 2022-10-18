@@ -86,7 +86,11 @@ namespace Vidly.Controllers
         public ActionResult New()
         {
             var movieFormViewModel = new MovieFormViewModel()
+            {   Movie = new Movie()
             {
+                ReleaseDate = DateTime.Now,
+            },
+
                 Genres = _context.Genres.ToList()
             };
             return View("MoviesForm", movieFormViewModel);
@@ -95,6 +99,10 @@ namespace Vidly.Controllers
         public ActionResult Edit(int id)
         {
             var movie = _context.Movies.Single(m => m.Id == id);
+
+            if (movie == null)
+                return HttpNotFound();
+
             var movieFormViewModel = new MovieFormViewModel()
             {   
                 Movie = movie,
@@ -107,8 +115,24 @@ namespace Vidly.Controllers
         [HttpPost]
         public ActionResult Save (Movie movie)
         {
+            if (!ModelState.IsValid)
+            {
+                var viewModel = new MovieFormViewModel
+                {
+                    Movie = movie,
+                    Genres = _context.Genres.ToList()
+                };
+
+                return View("MoviesForm", viewModel);
+            }
+
+
+
             if (movie.Id == 0)
+            {
+                 movie.DateAdded = DateTime.Now;
                 _context.Movies.Add(movie);
+            }    
             else
             {
                 var moviesInDB = _context.Movies.Single(m => m.Id == movie.Id);
